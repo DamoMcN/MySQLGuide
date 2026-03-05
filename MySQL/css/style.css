@@ -59,17 +59,82 @@ nav{
   padding: 8px 16px;
   text-decoration: none;
 }
-    /*----------Nav----------*/
+    /*----------NavEnd----------*/
 /*----------HeaderEnd----------*/
 
 
 /*----------Main----------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
 body{
     min-width: 500px;
     background-color: #F4F7F5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #08090A;
     background-color: #999999;
+}
+/*----------Home page cards----------*/
+.cardRow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    padding-right: 1em;
+    margin: 2em;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5em;
+    margin: 5%;
+    font-family: copperplate, serif;
+    font-size: 25px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: fit-content;
+    height: 120px;
+    border-radius: 15px;
+    background-color: #01608A;
+}
+
+.cardButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: .2em;
+    margin: 1em;
+    font-family: copperplate, serif;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    border: #08090A solid 1px;
+    border-radius: 5px;
+    background-color: #E98E00;
+    color: #08090A;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em;
+    width: 350px;
+    width: 100%;
+    height: 100%;
 }
 .container{
     display: flex;
@@ -79,7 +144,26 @@ body{
     margin: 2em;
     width: 350px;
 }
-.containerRow{
+#ActiveMenuCards{
+    visibility: visible;
+}
+#hiddenMenuCards{
+    visibility: hidden;
+}
+/*----------Home page cards End----------*/
+
+
+/*----------Active/hidden styles----------*/
+.statments{
+    visibility: hidden;
+}
+.activeStatments{
+    visibility: visible;
+}
+/*----------Active/hidden styles End----------*/
+
+/*----------Statments----------*/
+.statmentsRow{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -90,7 +174,7 @@ body{
     padding: 0%;
     width: 350px;
 }
-.h3Container{
+.h3statmentsContainer{
     display: flex;
     justify-content: start;
     font-family: Tahoma, sans-serif;
@@ -104,7 +188,7 @@ body{
     background-color: #01608A;
     transition: transform 0.5s ease-in-out;
 }
-.h3ContainerActive{
+.h3statmentsContainerActive{
     display: flex;
     justify-content: start;
     font-family: Tahoma, sans-serif;
@@ -147,190 +231,24 @@ img{
     border-radius: inherit;
     object-fit: contain;
 }
+/*----------Statments END----------*/
+
+/*----------Keys----------*/
+/*----------Keys END----------*/
+
+/*----------Lingo----------*/
+/*----------Lingo END----------*/
+
+
 
 /*----------MainEnd----------*/
+
+
 
 /*------Media Queries------*/
 
 
-@media (min-width: 600px) {
-    .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin: 2em;
-        width: 100%;
-    }
-    .containerRow{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
-    }
-    .h3Container{
-        display: flex;
-        justify-content: start;
-        font-family: Tahoma, sans-serif;
-        padding-left: 1em;
-        margin: 1em;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-        font-size: 17px;
-        width: 93%;
-        height: 60px;
-        border-radius: 15px;
-        background-color: #01608A;
-        transition: transform 0.5s ease-in-out;
-    }
-    .h3ContainerActive{
-        display: flex;
-        justify-content: start;
-        font-family: Tahoma, sans-serif;
-        padding-left: 1em;
-        margin: 1em;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-        font-size: 17px;
-        width: 93%;
-        height: 60px;
-        border-radius: 15px;
-        background-color: #E98E00;
-        transition: transform 0.5s ease-in-out;
-    }
-    .Rh3Text{
-        display: flex;
-        justify-content: end;
-        font-family: 'Courier New', Courier, monospace;
-        padding-right: 1em;
-        font-size: 10px;
-        width: 100%;
-        
-    }
-    .activePara{
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 1em;
-        font-family: copperplate, serif;
-        font-size: 15px;
-        width: 93%;
-    }
-    img{
-        width: 90%;
-        height: 100%;
-        display: block;
-        align-items: center;
-        border-radius: inherit;
-        object-fit: contain;
-    }
-    #dropIndexRow{
-        display: flex;
-        flex-direction: row;
-        max-width: 50%;
-        justify-self: center;    
-    }
-    
-    }
-    @media (max-width: 750px){
-        #databaseRow .h3Container{
-            font-size: 10px;   
-        }
-    }
 
-        @media (min-width: 900px) {
-                body{
-                    margin-left: 10%;
-                    margin-right: 10%;
-                    background-color: #999999;
-                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    color: #08090A;
-                    width:80%;
-                }
-                .headerContainer{
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: row;
-                    width: 100%;
-                    height: 5%;
-                    padding: .5em;
-                    background-color: #08090A;
-                }
-                .container{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    margin: 2em;
-                    width: 100%;
-                    
-                }
-                .containerRow{
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-around;
-                    width: 100%;
-                }
-                .h3Container{
-                    display: flex;
-                    justify-content: start;
-                    font-family: Tahoma, sans-serif;
-                    padding-left: 1em;
-                    margin: 1em;
-                    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-                    font-size: 17px;
-                    width: 93%;
-                    height: 60px;
-                    border-radius: 15px;
-                    background-color: #01608A;
-                    transition: transform 0.5s ease-in-out;
-                }
-                .h3ContainerActive{
-                    display: flex;
-                    justify-content: start;
-                    font-family: Tahoma, sans-serif;
-                    padding-left: 1em;
-                    margin: 1em;
-                    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-                    font-size: 17px;
-                    width: 93%;
-                    height: 60px;
-                    border-radius: 15px;
-                    background-color: #E98E00;
-                    transition: transform 0.5s ease-in-out;
-                }
-                .Rh3Text{
-                    display: flex;
-                    justify-content: end;
-                    font-family: 'Courier New', Courier, monospace;
-                    padding-right: 1em;
-                    font-size: 10px;
-                    width: 100%;
-                    
-                }
-                .activePara{
-                    display: none;
-                    flex-direction: column;
-                    justify-content: center;
-                    text-align: center;
-                    padding: 1em;
-                    font-family: copperplate, serif;
-                    font-size: 15px;
-                    width: 93%;
-                }
-                img{
-                    width: 90%;
-                    height: 100%;
-                    display: block;
-                    align-items: center;
-                    border-radius: inherit;
-                    object-fit: contain;
-                }
-                #dropIndexRow{
-                    display: flex;
-                    flex-direction: row;
-                    max-width: 50%;
-                    justify-self: center;    
-                }
-
-        }
 
 /* colours
 #01608A blue

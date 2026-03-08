@@ -13,15 +13,24 @@ $(document).ready(function() {
         $(this).css('transform', 'scale(1)');
         $(this).css('border', 'none');
     });
-    $('#SyntaxButton').on('click', function() {
+    $('#syntaxButton').on('click', function() {
     $(this).parent().parent().hide(500);
     $('.Syntax').css('display', 'flex');
+    $('#returnButton').show(500); // Needed on every card button
     
     });
     $('#returnButton').on('click', function() {  
         $(this).parent().prev().children('.cardRow').show(500);
+        $(this).hide(500);
+        $(this).parent().hide(500); 
     });
     // ----SyntaxContainerEND----
+
+    $('#lingoButton').on('click', function() {
+    $(this).parent().parent().prev().hide(500);
+    $('.Lingo').css('display', 'flex');
+    $('#returnButton').show(500); // Needed on every card button
+    });
 
     $('.cardButton').on('mouseenter', function() {
         $(this).css('transform', 'scale(1.05)');

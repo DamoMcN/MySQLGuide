@@ -50,19 +50,20 @@ body{
     background-color: #999999;
 }
 #returnButton{
-    position: static;
-    float: left;
+    display: block;
+    position: fixed;
+    top: 100px;
+    left: 20px;
     padding: .2em;
     margin: 1em;
     width: 40px;
     height: 60px;
-    color: #08090A;
-    background-color: #848484;
-    box-shadow: 2px 2px 2px rgba(0.25, 0.25, 0.25, 0.25);
+    /* background-color: #848484;
+    box-shadow: 2px 2px 2px rgba(0.25, 0.25, 0.25, 0.25); */
     border-radius: 20px;
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
-
+    
 }
 /*----------Home page cards----------*/
 .cardRow{
@@ -94,7 +95,7 @@ body{
     max-width: fit-content;
     height: 120px;
     border-radius: 15px;
-    background-color: #01608A;
+
 }
 
 .cardButton{
@@ -133,6 +134,15 @@ body{
     margin: 2em;
     width: 350px;
 }
+.SyntaxCard{
+    background-color: #01608A;
+}
+.LingoCard{
+    background-color: #48A9A6;
+}
+.KeysCard{
+    background-color: #A14A76;
+}
 /* #ActiveMenuCards{
     visibility: visible;
 }
@@ -144,6 +154,12 @@ body{
 
 /*----------hidden styles----------*/
 .Syntax{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Lingo{
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -177,6 +193,7 @@ body{
     border-radius: 15px;
     background-color: #01608A;
     transition: transform 0.5s ease-in-out;
+    cursor: pointer;
 }
 .h3SyntaxContainerActive{
     display: flex;
@@ -223,11 +240,23 @@ img{
 }
 /*----------Syntax END----------*/
 
+
+/*----------Lingo----------*/
+.tableContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+/*----------Lingo END----------*/
+
+
 /*----------Keys----------*/
 /*----------Keys END----------*/
 
-/*----------Lingo----------*/
-/*----------Lingo END----------*/
+
 
 
 
@@ -240,9 +269,13 @@ img{
 
 
 
-/* colours
+/* 
+colours
+
 #01608A blue
 #E98E00 orange
 #08090A black
 #A7A2A9 gray
-#F4F7F5 white*/
+#F4F7F5 white
+
+*/

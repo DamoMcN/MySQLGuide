@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My SQL Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="headerContainer">
+            <h1>My SQL Guide</h1>
+            <div class="pngContainer">
+                <img src="img/Logo.png" alt="Logo">
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+
+        <div id="menuCards">
+
+            <div class="cardRow">
+
+                <div class="card SyntaxCard">
+                    <h2>Syntax</h2>
+                    <button class="cardButton" id="SyntaxButton">View</button>
+                </div>
+
+                <div class="card LingoCard">
+                    <h2>Lingo</h2>
+                    <button class="cardButton" id="lingoButton">View</button>
+                </div>
+
+                <div class="card KeysCard">
+                    <h2>Keys</h2>
+                    <br>
+                    <button class="cardButton" id="keysButton">View</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="Syntax">
+            <img id="returnButton" href="index.html" src="img/returnLogo.png" alt="Return"></img>
+
+            <div class="SyntaxRow">
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>SELECT</strong></h3>
+                        <h3 class="Rh3Text">Keyword</h3>
+                    </div>
+                    <p class="activePara">Retrieve data from a relational database. It allows you to query and retrieve
+                        specific information from one or more tables, which can be used for various purposes such as
+                        reporting, analysis, and data manipulation.</p>
+                </div>
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>UPDATE</strong></h3>
+                        <h3 class="Rh3Text">Statement</h3>
+                    </div>
+                    <p class="activePara">Changes the data of one or more records in a table. Either all the rows can be
+                        updated, or a subset may be chosen using a condition.</p>
+                </div>
+            </div>
+            <div class="SyntaxRow">
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>DELETE</strong></h3>
+                        <h3 class="Rh3Text">Statement</h3>
+                    </div>
+                    <p class="activePara">Used to remove one or more records from a table. A subset may be defined for
+                        deletion using a condition, otherwise all records are removed.</p>
+                </div>
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>INSERT&nbsp;INTO</strong></h3>
+                        <h3 class="Rh3Text">Statement</h3>
+                    </div>
+                    <p class="activePara">Used to add new records to a table in a database. It can insert data into all
+                        columns or just selected columns, and it supports inserting static values or data from another
+                        query.</p>
+                </div>
+            </div>
+            <div class="SyntaxRow" id="databaseRow">
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>CREATE&nbsp;DATABASE</strong></h3>
+                        <h3 class="Rh3Text">Statement</h3>
+                    </div>
+                    <p class="activePara">Creates a database with the given name. To use this statement, you need the
+                        CREATE privilege for the database.</p>
+                </div>
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>ALTER&nbsp;DATABASE</strong></h3>
+                        <h3 class="Rh3Text">Statement</h3>
+                    </div>
+                    <p class="activePara">Adds or removes files and filegroups from a database, changes the attributes
+                        of a database or its files and filegroups, changes the database collation, and sets database
+                        options. Database snapshots can't be modified.</p>
+                </div>
+            </div>
+            <div class="SyntaxRow">
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>CREATE&nbsp;TABLE</strong></h3>
+                        <h3 class="Rh3Text">Statement</h3>
+                    </div>
+                    <p class="activePara">Used to define and create a new table within a relational database. Tables are
+                        fundamental components of a database, used to store structured data in rows and columns. This
+                        statement specifies the table's structure, including column names, data types, constraints, and
+                        more.</p>
+                </div>
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>ALTER&nbsp;TABLE</strong></h3>
+                        <h3 class="Rh3Text">Statement</h3>
+                    </div>
+                    <p class="activePara">Used to modify the structure of an existing table in a relational database. It
+                        allows you to add, modify, or delete columns, as well as apply constraints, such as primary keys
+                        and foreign keys, and make other structural changes to the table.</p>
+                </div>
+            </div>
+            <div class="SyntaxRow">
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>DROP&nbsp;TABLE</strong></h3>
+                        <h3 class="Rh3Text">Statement</h3>
+                    </div>
+                    <p class="activePara">Used to permanently delete an existing table and all of its data, as well as
+                        associated indexes, triggers, and other objects. It is a powerful and irreversible operation, so
+                        it should be used with caution.</p>
+                </div>
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>CREATE&nbsp;INDEX</strong></h3>
+                        <h3 class="Rh3Text">Statement</h3>
+                    </div>
+                    <p class="activePara">Used to create indexes in tables. Indexes are used to retrieve data from the
+                        database more quickly than otherwise. The users cannot see the indexes, they are just used to
+                        speed up searches/queries.</p>
+                </div>
+            </div>
+            <div class="SyntaxRow" id="dropIndexRow">
+                <div class="container">
+                    <div class="h3SyntaxContainer" id="dropIndex" href="#">
+                        <h3><strong>DROP&nbsp;INDEX</strong></h3>
+                        <h3 class="Rh3Text">Statement</h3>
+                    </div>
+                    <p class="activePara">Drops an existing index from the database system. To execute this command you
+                        must be the owner of the index.</p>
+                </div>
+            </div>
+            <div class="SyntaxRow">
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>WHERE</strong></h3>
+                        <h3 class="Rh3Text">Clause</h3>
+                    </div>
+                    <p class="activePara">Used to filter records in a query based on specified conditions. It allows you
+                        to retrieve only the data that meets certain criteria, making it easier to focus on relevant
+                        information.</p>
+                </div>
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>FROM</strong></h3>
+                        <h3 class="Rh3Text">Keyword</h3>
+                    </div>
+                    <p class="activePara">Used to specify the table or tables from which to retrieve data in a query.
+                    </p>
+                </div>
+            </div>
+            <div class="SyntaxRow">
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>AND/OR</strong></h3>
+                        <h3 class="Rh3Text">Keyword</h3>
+                    </div>
+                    <p class="activePara">Used to combine multiple conditions in a WHERE clause. AND requires all
+                        specified conditions to be true, while OR allows any of the specified conditions to be true.</p>
+                </div>
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>DISTINCT</strong></h3>
+                        <h3 class="Rh3Text">Keyword</h3>
+                    </div>
+                    <p class="activePara">Used to return only unique values in a query result. It eliminates duplicate
+                        rows from the output.</p>
+                </div>
+            </div>
+            <div class="SyntaxRow">
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>LIMIT</strong></h3>
+                        <h3 class="Rh3Text">Clause</h3>
+                    </div>
+                    <p class="activePara">Used to limit the number of records returned by a query. It allows you to
+                        retrieve only a specific number of rows from the result set.</p>
+                </div>
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>GROUP&nbsp;BY</strong></h3>
+                        <h3 class="Rh3Text">Clause</h3>
+                    </div>
+                    <p class="activePara">Used to group rows that have the same values in specified columns into summary
+                        rows, typically to perform aggregate functions on each group.</p>
+                </div>
+                <div class="container">
+                    <div class="h3SyntaxContainer" href="#">
+                        <h3><strong>ORDER&nbsp;BY</strong></h3>
+                        <h3 class="Rh3Text">Clause</h3>
+                    </div>
+                    <p class="activePara">Used to sort the result set of a query in ascending or descending order based
+                        on one or more columns.</p>
+                </div>
+            </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Damon McNeela</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

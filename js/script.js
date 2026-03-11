@@ -16,20 +16,22 @@ $(document).ready(function() {
     $('#syntaxButton').on('click', function() {
     $(this).parent().parent().hide(500);
     $('.Syntax').css('display', 'flex');
-    $('#returnButton').show(500); // Needed on every card button
+    $('#syntaxBtn').show(500); // Needed on every card button
     
     });
-    $('#returnButton').on('click', function() {  
+    $('#syntaxBtn').on('click', function() {  
         $(this).parent().prev().children('.cardRow').show(500);
         $(this).hide(500);
         $(this).parent().hide(500); 
     });
     // ----SyntaxContainerEND----
 
+     // ----LingoContainer----
+
     $('#lingoButton').on('click', function() {
-    $(this).parent().parent().prev().hide(500);
+    $('#menuCards').hide(500);
     $('.Lingo').css('display', 'flex');
-    $('#returnButton').show(500); // Needed on every card button
+    $('#lingoBtn').show(500); // Needed on every card button
     });
 
     $('.cardButton').on('mouseenter', function() {
@@ -40,5 +42,11 @@ $(document).ready(function() {
         $(this).css('transform', 'scale(1)');
         $(this).css('box-shadow', 'none');
     });
-    
+
+    $('#lingoBtn').on('click', function() {  
+        $('#menuCards').show(500);
+        $(this).parent().hide(500);
+        $(this).hide(500); 
+    });
+     // ----LingoContainerEND----
 });

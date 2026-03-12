@@ -143,12 +143,7 @@ body{
 .KeysCard{
     background-color: #A14A76;
 }
-/* #ActiveMenuCards{
-    visibility: visible;
-}
-#hiddenMenuCards{
-    visibility: hidden;
-} */
+
 /*----------Home page cards End----------*/
 
 
@@ -249,7 +244,19 @@ img{
     align-items: center;
     text-align: center;
     padding: 1em;
+    margin-top: 4em;
 }
+tr{
+    background-color: #08090A;
+    
+}
+td{
+    background-color: #08090A;
+    border: #F4F7F5 solid 1px;
+    color: #F4F7F5;
+    padding: 2px;
+}
+
 /*----------Lingo END----------*/
 
 

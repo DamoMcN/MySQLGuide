@@ -48,5 +48,19 @@ $(document).ready(function() {
         $(this).parent().hide(500);
         $(this).hide(500); 
     });
+
+    $('.lingoDD-btn').mouseenter(function(){
+        $(this).css('transform', 'scale(1.05)');
+        $(this).css('border', '3px solid #E98E00');
+    });
+    $('.lingoDD-btn').mouseleave(function(){
+        $(this).css('transform', 'scale(1.0)')
+        $(this).css('border', 'none');
+    });
+
+    $('#relationBtn').on('click', function() {
+        $(this).next('#relationTable').slideToggle('slow');
+        $(this).toggleClass('relationTableActive');
+    });
      // ----LingoContainerEND----
 });

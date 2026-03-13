@@ -237,6 +237,24 @@ img{
 
 
 /*----------Lingo----------*/
+.lingoDD-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    align-self: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace; /* -------------- Maybe change this font ---------------*/
+    background-color: #48A9A6;
+    padding: 2em;
+    margin: 1em;
+    width: 350px;
+    height: 60px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
 .tableContainer{
     display: flex;
     flex-direction: column;
@@ -245,17 +263,23 @@ img{
     text-align: center;
     padding: 1em;
     margin-top: 4em;
+    transition: transform 0.5s ease-in-out;
 }
 tr{
     background-color: #08090A;
     
 }
 td{
+    font-size: 20px;
     background-color: #08090A;
     border: #F4F7F5 solid 1px;
     color: #F4F7F5;
     padding: 2px;
 }
+.relationTableActive{
+    background-color: #E98E00;
+}
+
 
 /*----------Lingo END----------*/
 

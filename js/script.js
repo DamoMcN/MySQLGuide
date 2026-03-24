@@ -61,6 +61,8 @@ $(document).ready(function() {
     $('#relationBtn').on('click', function() {
         $(this).next('#relationTable').slideToggle('slow');
         $(this).toggleClass('relationTableActive');
+        $('#relationTable').slideToggle(500);
     });
+
      // ----LingoContainerEND----
 });

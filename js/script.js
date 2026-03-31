@@ -64,5 +64,7 @@ $(document).ready(function() {
         $('#relationTable').slideToggle(500);
     });
 
+    $('')
+
      // ----LingoContainerEND----
 });
